@@ -1,31 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:id="@+id/container"
-            android:textSize="20sp"
-            android:layout_gravity="center"
-            android:text="This is a CameraX test app!"
-            android:gravity="center">
-        </TextView>
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="291dp"
+        android:layout_height="371dp"
+        android:layout_marginBottom="288dp"
+        android:contentDescription="TODO"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
+        tools:srcCompat="@tools:sample/avatars" />
 
-        <Button
-            android:id="@+id/enableCamera"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="Open Camera" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/gallery"
+        android:layout_width="350dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="179dp"
+        android:layout_marginEnd="31dp"
+        android:layout_marginBottom="21dp"
+        android:layout_weight="1"
+        android:text="Open gallery"
+        app:layout_constraintBottom_toTopOf="@+id/enableCamera"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img" />
+
+    <Button
+        android:id="@+id/enableCamera"
+        android:layout_width="345dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginBottom="84dp"
+        android:gravity="center"
+        android:text="Open Camera"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gallery" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
